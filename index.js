@@ -15,7 +15,7 @@ const fi = (function() {
 
     map: function(collection, iteratee) {
       const newCollection = (collection instanceof Array) ? collection.slice() : Object.values(collection)
-      const newC = [];  
+      const newC = [];
       for (let i = 0; i < newCollection.length; i++) {
           newC.push(iteratee(newCollection[i]))
 
@@ -29,7 +29,7 @@ const fi = (function() {
          if (!acc) {
           acc = collection[0];
           collection = collection.slice(1);
-         } 
+         }
          for (let i = 0; i < collection.length; i++) {
 
               acc = iteratee(acc, collection[i]);
